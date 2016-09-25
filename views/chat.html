@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Web App</title>
+    <link rel="icon" type="image/png" href="http://example.com/myicon.png">
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/chat.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+
+<body>
+    <ul class="pages">
+        <li class="chat page">
+            <div class="chatArea">
+                <ul class="messages"></ul>
+            </div>
+            <input class="inputMessage" placeholder="Type here..." />
+        </li>
+        <li class="login page">
+            <div class="form">
+                <h3 class="title">Tell us your name?</h3>
+                <input class="usernameInput" type="text" maxlength="14" />
+            </div>
+        </li>
+        <li class="mySidenav">
+            <div id="mySidenav" class="sidenav">
+
+                <ul class="online-users">
+                    <li class="user-me" style="color:deeppink">
+                    </li>
+                    <li>
+
+                    </li>
+                    <li class="userheader" style="color:green">
+                        Online Users :
+                    </li>
+                </ul>
+                <ul class="online-users" id="current-users">
+                    <li>All Services</li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="/javascripts/chatmain.js"></script>
+
+</body>
+
+</html>
