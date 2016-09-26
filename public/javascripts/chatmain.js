@@ -23,12 +23,13 @@ $(function() {
     var usersConn = [];
     var userMe = $('.user-me');
     // Prompt for setting a username
-    var username;
+    var username = window.location.search.replace('?', '').split('=')[1];
+    console.log(username);
+
     var connected = false;
     var typing = false;
     var lastTypingTime;
     var $currentInput = $usernameInput.focus();
-
 
     $sidenav.hide();
 
@@ -55,22 +56,24 @@ $(function() {
     }
 
     // Sets the client's username
-    function setUsername() {
-        username = cleanInput($usernameInput.val().trim());
+    (function setUsername() {
+        // username = cleanInput($usernameInput.val().trim());
+        // password = cleanInput($usernameInput.val().trim());
 
+        console.log("inside set Username");
         // If the username is valid
-        if (username) {
-            $loginPage.fadeOut();
-            $chatPage.show();
-            $sidenav.show();
-            $loginPage.off('click');
-            $currentInput = $inputMessage.focus();
-            userMe.text("Hi " + username);
 
-            // Tell the server your username
-            socket.emit('add user', username);
-        }
-    }
+        //$loginPage.fadeOut();
+        $chatPage.show();
+        $sidenav.show();
+        $loginPage.off('click');
+        $currentInput = $inputMessage.focus();
+        userMe.text("Hi " + username);
+
+        // Tell the server your username
+        socket.emit('add user', username);
+
+    })();
 
     // Sends a chat message
     function sendMessage() {

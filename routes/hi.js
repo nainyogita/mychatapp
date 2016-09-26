@@ -3,9 +3,11 @@ var router = express.Router();
 
 /* GET hi.html */
 router.get('/', function(req, res, next) {
-    res.render('hi', {
-        title: 'HTML Rendering'
-    });
+    console.log("inside hii router");
+
+    console.log(req.query.username);
+    res.render('hi');
 });
 
 module.exports = router;
+xports = router;

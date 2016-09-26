@@ -3,9 +3,9 @@ var router = express.Router();
 
 /* Render chat view */
 router.get('/', function(req, res, next) {
-    res.render('chat', {
-        title: 'Chat web app'
-    });
+
+    console.log(req.query.username);
+    res.render('chat');
 });
 
 module.exports = router;
