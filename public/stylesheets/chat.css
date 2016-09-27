@@ -31,7 +31,7 @@ ul {
 }
 
 /* ----Side Nav ----*/
-.online-users {
+.ou {
 	padding-left: 0px;
 }
 
@@ -51,6 +51,7 @@ ul {
 }
 
 .sidenav {
+
 	height: 100%;
 	width: 20%;
 	position: fixed;

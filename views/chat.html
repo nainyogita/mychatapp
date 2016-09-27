@@ -14,6 +14,10 @@
 </head>
 
 <body>
+
+      <div id="chatbox">
+
+      </div>
     <ul class="pages">
         <li class="chat page">
             <div class="chatArea">
@@ -22,25 +26,27 @@
             <input class="inputMessage" placeholder="Type here..." />
         </li>
 
-        <li class="mySidenav">
-            <div id="mySidenav" class="sidenav">
+        <li class="sidenav">
+            <ul class="ou">
+                <li class="user-me" style="color:deeppink">
+                </li>
+                <li>
 
-                <ul class="online-users">
-                    <li class="user-me" style="color:deeppink">
-                    </li>
-                    <li>
-
-                    </li>
-                    <li class="userheader" style="color:green">
-                        Online Users :
-                    </li>
-                </ul>
-                <ul class="online-users" id="current-users">
-                    <li>All Services</li>
-                </ul>
-            </div>
+                </li>
+                <li class="userheader" style="color:green">
+                    Online Users :
+                </li>
+            </ul>
+            <ul class="ou ab" id="current-users">
+                <li>All Users</li>
+            </ul>
         </li>
     </ul>
+
+    <ul id="chatrequests">
+    </ul>
+
+
 
     <script src="/socket.io/socket.io.js"></script>
 
